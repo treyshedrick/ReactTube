@@ -1,13 +1,13 @@
-.App {
+.container-fluid {
   text-align: center;
+  color: white;
   background-color: #282c34;
-  min-width: 100vh;
-  min-height: 100vh;
+  min-height:100vh;
 }
 
 .App-logo {
   height: 50px;
-  pointer-events: none;
+  display: inline-block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -34,9 +34,9 @@
 
 .form-control
 {
-  margin-left: 0px;
+  margin-left: 20px;
   margin-top: 20px;
-  width: 400px;
+  width: 50%;
   height: 35px;
   display: inline-block;
 }
@@ -45,4 +45,13 @@
   margin-top: -3px;
   display: inline-block;
   color: #61dafb;
+}
+.header-button:hover
+{
+  background-color: #282c348a;
+}
+.header-button:focus, .header-button:active
+{
+  outline: none !important;
+  box-shadow: none !important;
 }
