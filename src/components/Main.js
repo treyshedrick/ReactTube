@@ -11,8 +11,11 @@ class Main extends Component {
         }
     }
 
+    //Youtube Endpoint
+    //https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=ReactJS%20Tutorial&type=videos&key=' + process.env.REACT_APP_YOUTUBE_API_KEY
+
     componentDidMount(){
-        axios.get('https://jsonplaceholder.typicode.com/todos/1')
+        axios.get('./test.json') //test file
             .then(response=> {
                 this.setState({
                     isLoaded: true,
@@ -20,6 +23,7 @@ class Main extends Component {
             })
             .catch(axiosError =>{
                 this.setState({
+                    isLoaded: true,
                     error: axiosError
                 })
             })
@@ -28,15 +32,21 @@ class Main extends Component {
     render() { 
         if(this.state.isLoaded){
             console.log(this.state.data)
-            return(
+            return (
                 <div className="container">
-                    <h1>{this.state.data.title}</h1>
+                    <h1>{this.state.data.items[2].snippet.channelTitle}</h1>
                 </div>
             );
-        }
+        } else if(this.state.error){
             return (
             <div className="container">
-            </div> );
+                <h1>Error: {this.state.error.message}</h1>
+            </div>
+            );
+        } else{
+            return (
+                <div className="container"></div> );
+        }
     }
 }
  
