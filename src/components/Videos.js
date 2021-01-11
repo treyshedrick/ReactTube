@@ -1,12 +1,19 @@
 const Videos = (props) =>{
     console.log(props);
     const video = props.videoItem;
+    
+    let videoTitle = video.snippet.title
+    if(videoTitle.length > 53){
+        videoTitle = videoTitle.substring(0,50) + "...";
+    }
+
     return(
         <div className="col-md-4">
-            <div>
+            <a href={"https://youtube.com/watch?v="+video.id.videoId} className="watchVideo">
                 <img src={video.snippet.thumbnails.medium.url} alt="videoimage" className="video img-fluid rounded"></img>
-                <div>{video.snippet.title}</div>
-            </div>
+                <div className="videoName">{videoTitle}</div>
+            </a>
+            <a href={"https://youtube.com/channel/"+video.snippet.channelId} className="channelName">{video.snippet.channelTitle}</a>
         </div>
     )
 }
