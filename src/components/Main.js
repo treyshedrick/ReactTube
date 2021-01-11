@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Videos from './Videos'
 
 class Main extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class Main extends Component {
     }
 
     //Youtube Endpoint
-    //https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=ReactJS%20Tutorial&type=videos&key=' + process.env.REACT_APP_YOUTUBE_API_KEY
+    //https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&order=viewCount&q=ReactJS%20Tutorial&key=' + process.env.REACT_APP_YOUTUBE_API_KEY
 
     componentDidMount(){
         axios.get('./test.json') //test file
@@ -30,11 +31,23 @@ class Main extends Component {
     }
 
     render() { 
+        const vidArr = this.state.data.items;
+                
         if(this.state.isLoaded){
-            console.log(this.state.data)
             return (
                 <div className="container">
-                    <h1>{this.state.data.items[2].snippet.channelTitle}</h1>
+                    <div className="row">
+                        {vidArr.slice(0,3).map((i) => <Videos videoItem = {i} key ={i.etag}/>)}
+                    </div>
+                    <div className="row">
+                        {vidArr.slice(3,6).map((i) => <Videos videoItem = {i} key ={i.etag}/>)}
+                    </div>
+                    <div className="row">
+                        {vidArr.slice(6,9).map((i) => <Videos videoItem = {i} key ={i.etag}/>)}
+                    </div>
+                    <div className="row">
+                        {vidArr.slice(9,12).map((i) => <Videos videoItem = {i} key ={i.etag}/>)}
+                    </div>
                 </div>
             );
         } else if(this.state.error){
