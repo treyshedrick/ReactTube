@@ -2,7 +2,7 @@ import logo from '../logo.svg';
 
 const AppHeader = () =>{
     return(
-        <header className="row">
+        <header className="row AppHeader">
             <div className="col-1">
                 <img src={logo} className="App-logo" alt="logo" />
                 <div className="ReactTube">ReactTube</div>
