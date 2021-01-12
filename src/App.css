@@ -6,12 +6,24 @@
 .container
 {
   height: 100%;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .App-logo {
   height: 50px;
   display: inline-block;
+}
+.HeaderTopics
+{
+  padding-top: 90px;
+  position: fixed;
+  z-index: 95;
+  width: 100%;
+  text-align: center !important;
+  background-color: #282c34;
+  border-width: 1px;
+  border-bottom: 1px solid #444852;
+  padding-bottom: 5px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
