@@ -12,10 +12,10 @@ class Main extends Component {
         }
     }
 
-    //Youtube Endpoint
-    //https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&order=viewCount&q=ReactJS%20Tutorial&key=' + process.env.REACT_APP_YOUTUBE_API_KEY
-
+    
     componentDidMount(){
+        //Youtube Endpoint
+        //axios.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&order=viewCount&q=ReactJS%20Tutorial&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
         axios.get('./test.json') //test file
             .then(response=> {
                 this.setState({
@@ -30,9 +30,27 @@ class Main extends Component {
             })
     }
 
+    componentDidUpdate(prevProps){
+        if(prevProps.urlSearch !== this.props.urlSearch){
+            //Youtube Endpoint
+            //axios.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=ReactJS%20Tutorial%20'+this.props.urlSearch+'&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
+            axios.get('./test2.json')
+            .then(response=> {
+                this.setState({
+                    isLoaded: true,
+                    data: response.data})
+            })
+            .catch(axiosError =>{
+                this.setState({
+                    isLoaded: true,
+                    error: axiosError
+                })
+            })
+        }
+    }
+
     render() { 
         const vidArr = this.state.data.items;
-                
         if(this.state.isLoaded){
             return (
                 <div className="container">
