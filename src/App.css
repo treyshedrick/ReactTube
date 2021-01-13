@@ -46,6 +46,10 @@
   opacity: .8;
 }
 
+.Error
+{
+  padding: 150px 27.5%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

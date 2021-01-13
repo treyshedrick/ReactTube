@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Videos from './Videos'
+import Error from './Error'
 
 class Main extends Component {
     constructor(props) {
@@ -24,7 +25,6 @@ class Main extends Component {
             })
             .catch(axiosError =>{
                 this.setState({
-                    isLoaded: true,
                     error: axiosError
                 })
             })
@@ -42,7 +42,7 @@ class Main extends Component {
             })
             .catch(axiosError =>{
                 this.setState({
-                    isLoaded: true,
+                    isLoaded:false,
                     error: axiosError
                 })
             })
@@ -69,14 +69,12 @@ class Main extends Component {
                 </div>
             );
         } else if(this.state.error){
-            return (
-            <div className="container">
-                <h1>Error: {this.state.error.message}</h1>
-            </div>
+            return (   
+                <Error error={this.state.error.message} />
             );
         } else{
             return (
-                <div className="container"></div> );
+                <div className="container">test</div> );
         }
     }
 }
