@@ -23,7 +23,27 @@
   background-color: #282c34;
   border-width: 1px;
   border-bottom: 1px solid #444852;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+.HTbuttons
+{
+  margin: 0px 6px 2px 6px;
+  border-radius: 20px;
+  border-style: solid;
+  background-color:  #444852;
+  border-color:  #53565f;
+  color:white;
+  font-size: 14px;
+}
+.HTbuttons:active, .HTbuttons:focus
+{
+  outline: none !important;
+  color:black;
+  background-color: #53565f;;
+}
+.HTbuttons:hover
+{
+  opacity: .8;
 }
 
 @media (prefers-reduced-motion: no-preference) {

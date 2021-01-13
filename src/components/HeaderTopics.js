@@ -20,14 +20,18 @@ class HeaderTopics extends Component {
         return (
             <Fragment>
                 <div className="row HeaderTopics">
-                    <button value="" type="Submit" onClick={this.clickHandler}>All</button>
-                    <button value="JSX" type="Submit" onClick={this.clickHandler}>JSX</button>
-                    <button value="Componenets" type="Submit" onClick={this.clickHandler}>Components</button>
-                    <button value="Props" type="Submit" onClick={this.clickHandler}>Props</button>
-                    <button value="State" type="Submit" onClick={this.clickHandler}>State</button>
-                    <button value="Lifecycle%20Methods" type="Submit" onClick={this.clickHandler}>Lifecycle Methods</button>
-                    <button value="Event%Handling" type="Submit" onClick={this.clickHandler}>Event Handling</button>
+                    <div className="col-12">
+                        <button className="HTbuttons" value="" type="Submit" onClick={this.clickHandler}>All</button>
+                        <button className="HTbuttons" value="JSX" type="Submit" onClick={this.clickHandler}>JSX</button>
+                        <button className="HTbuttons" value="Componenets" type="Submit" onClick={this.clickHandler}>Components</button>
+                        <button className="HTbuttons" value="Props" type="Submit" onClick={this.clickHandler}>Props</button>
+                        <button className="HTbuttons" value="State" type="Submit" onClick={this.clickHandler}>State</button>
+                        <button className="HTbuttons" value="Lifecycle%20Methods" type="Submit" onClick={this.clickHandler}>Lifecycle Methods</button>
+                        <button className="HTbuttons" value="Event%Handling" type="Submit" onClick={this.clickHandler}>Event Handling</button>
+                        <button className="HTbuttons" value="Hooks" type="Submit" onClick={this.clickHandler}>Hooks</button>
+                        <button className="HTbuttons" value="API" type="Submit" onClick={this.clickHandler}>API</button>
                     </div>
+                </div>
                 <Main urlSearch={this.state.clickedVal}/>
             </Fragment>
         );
