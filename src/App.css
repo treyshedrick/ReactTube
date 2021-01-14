@@ -1,6 +1,6 @@
 .container-fluid {
   color: white;
-  background-color: #282c34;
+  background-color: #21242b;
   min-height:100vh;
 }
 .container
@@ -17,7 +17,7 @@
 {
   padding-top: 90px;
   position: fixed;
-  z-index: 95;
+  z-index: 90;
   width: 100%;
   text-align: center !important;
   background-color: #282c34;
@@ -50,6 +50,19 @@
 {
   padding: 150px 27.5%;
 }
+.SideNav
+{
+  z-index: 95;
+  width: 240px;
+  padding-top: 100px;
+  height: 100%;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #282c34;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -134,10 +147,42 @@
 }
 .videoName
 {
-    font-size: 15px;
+    font-size: 13px;
 }
 .watchVideo:hover, .watchVideo
 {
   text-decoration: none;
   color: white;
+}
+.playlistLink
+{
+  font-size: 14px;
+  color: white;
+}
+.playlistLink:hover
+{
+  text-decoration: none;
+  opacity: .5;
+  color: #61dafb;
+}
+.playlistItem
+{
+  padding-left: 10px;
+}
+.playlistItem:hover
+{
+  background-color: #53565f;
+}
+.playlistHeader
+{
+  padding-left: 20px;
+  padding-bottom: 15px;
+  color: #61dafb;
+}
+.playlistChannel
+{
+  color:#61dafb;
+  padding-left: 1px;
+  font-size: 13px;
+  opacity: .75;
 }
