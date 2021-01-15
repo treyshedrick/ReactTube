@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import axios from 'axios';
+import {getYoutubeContentHook} from '../functions/getYoutubeContent.js';
 import SideNavItems from './SideNavItems';
 
 let SideNav = () =>{
@@ -8,15 +8,8 @@ let SideNav = () =>{
     const[error,isError] = useState(null);
 
     useEffect( () => {
-    axios.get('./test2.json') //test file
-    .then(response=> {
-        axiosLoaded(true)
-        loadData(response.data)
-    })
-    .catch(axiosError =>{
-        isError(axiosError)
-    }
-    )},[]);
+        getYoutubeContentHook(axiosLoaded, loadData, isError, './test2.json');
+    },[]);
 
     if(isLoaded && data != null){
     return(

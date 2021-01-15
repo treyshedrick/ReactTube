@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import {getYoutubeContentMain} from '../functions/getYoutubeContent.js';
 import Videos from './Videos'
 import Error from './Error'
 
@@ -17,35 +17,14 @@ class Main extends Component {
     componentDidMount(){
         //Youtube Endpoint
         //axios.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video&order=viewCount&q=ReactJS%20Tutorial&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
-        axios.get('./test.json') //test file
-            .then(response=> {
-                this.setState({
-                    isLoaded: true,
-                    data: response.data})
-            })
-            .catch(axiosError =>{
-                this.setState({
-                    error: axiosError
-                })
-            })
+        getYoutubeContentMain(this,'./test.json')
     }
 
     componentDidUpdate(prevProps){
         if(prevProps.urlSearch !== this.props.urlSearch){
             //Youtube Endpoint
             //axios.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video&q=ReactJS%20Tutorial%20'+this.props.urlSearch+'&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
-            axios.get('./test2.json')
-            .then(response=> {
-                this.setState({
-                    isLoaded: true,
-                    data: response.data})
-            })
-            .catch(axiosError =>{
-                this.setState({
-                    isLoaded:false,
-                    error: axiosError
-                })
-            })
+            getYoutubeContentMain(this,'./test2.json')
         }
     }
 
