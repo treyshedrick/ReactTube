@@ -8,7 +8,6 @@ let SideNav = () =>{
     const[error,isError] = useState(null);
 
     useEffect( () => {
-    console.log("API CALL")
     axios.get('./test2.json') //test file
     .then(response=> {
         axiosLoaded(true)
