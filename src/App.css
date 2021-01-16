@@ -198,3 +198,10 @@
 .cursor{
   cursor:pointer;
 }
+
+.videoPlayer
+{
+  height: 80%;
+  width: 80%;
+  padding-left: 10%;
+}
