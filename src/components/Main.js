@@ -49,16 +49,16 @@ class Main extends Component {
             return (
                 <div className="container-fluid Main">
                     <div className="row">
-                        {vidArr.slice(0,3).map((i) => <div className="col-md-4 cursor" onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div>)}
+                        {vidArr.slice(0,3).map((i) => <div className="col-md-4" key={i.etag}><div onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div></div>)}
                     </div>
                     <div className="row">
-                        {vidArr.slice(3,6).map((i) => <div className="col-md-4 cursor" onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div>)}
+                        {vidArr.slice(3,6).map((i) => <div className="col-md-4" key={i.etag}><div onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div></div>)}
                     </div>
                     <div className="row">
-                        {vidArr.slice(6,9).map((i) => <div className="col-md-4 cursor" onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div>)}
+                        {vidArr.slice(6,9).map((i) => <div className="col-md-4" key={i.etag}><div onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div></div>)}
                     </div>
                     <div className="row">
-                        {vidArr.slice(9,12).map((i) => <div className="col-md-4 cursor" onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div>)}
+                        {vidArr.slice(9,12).map((i) => <div className="col-md-4" key={i.etag}><div onClick={() => this.clickHandler(i)} key={i.etag}><Videos videoItem = {i} key ={i.etag}/></div></div>)}
                     </div>                    
                 </div>
             );

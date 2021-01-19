@@ -31,7 +31,7 @@ const Videos = (props) =>{
 
     return(
         <Fragment>
-            <img src={video.snippet.thumbnails.medium.url} alt="videoimage" className="video img-fluid rounded"></img>
+            <img src={video.snippet.thumbnails.medium.url} alt="videoimage" className="video img-fluid rounded cursor"></img>
             <div className="videoName">{videoTitle}</div>
             <a href={"https://youtube.com/channel/"+video.snippet.channelId} className="channelName">{video.snippet.channelTitle}</a>
             <div className="uploaded">{whenUploaded}</div>
