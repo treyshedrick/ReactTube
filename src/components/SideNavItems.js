@@ -6,7 +6,7 @@ let SideNavItems = (props) =>{
     }
 
     return(
-        <div className="playlistItem">
+        <div className="sideNavItem">
             <div><a className="playlistLink" href={"https://www.youtube.com/playlist?list=" + props.playlist.id.playlistId}>{playlistTitle}</a></div>
             <div ><span className="playlistChannel">{props.playlist.snippet.channelTitle}</span></div>
         </div>

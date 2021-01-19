@@ -162,29 +162,29 @@
   text-decoration: none;
   color: white;
 }
-.playlistLink
+.playlistLink, .sideNavLink
 {
   font-size: 14px;
   color: white;
 }
-.playlistLink:hover
+.playlistLink:hover, .sideNavLink:hover
 {
   text-decoration: none;
   opacity: .5;
   color: #61dafb;
 }
-.playlistItem
+.sideNavItem
 {
-  padding-left: 10px;
+  padding: 10px;
 }
-.playlistItem:hover
+.sideNavItem:hover
 {
   background-color: #53565f;
 }
-.playlistHeader
+.sideNavHeader
 {
   padding-left: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
   color: #61dafb;
 }
 .playlistChannel
