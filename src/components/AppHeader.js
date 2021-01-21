@@ -8,8 +8,7 @@ const AppHeader = () =>{
                 <div className="ReactTube">ReactTube</div>
             </div>
             <div className="col-8">
-                <input type="text" className="form-control" value="ReactJS" readOnly></input>
-                <button className="btn btn-outline-secondary border-0 border header-button"><i className="fa fa-search"></i></button>
+                <div className="header-text">React Tutorials</div>
             </div>
             <div className="col-2"></div>
       </header>
