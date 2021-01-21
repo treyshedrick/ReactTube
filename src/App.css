@@ -167,19 +167,17 @@
   font-size: 14px;
   color: white;
 }
-.playlistLink:hover, .sideNavLink:hover
-{
-  text-decoration: none;
-  opacity: .5;
-  color: #61dafb;
-}
 .sideNavItem
 {
-  padding: 10px;
+  padding: 5px;
 }
 .sideNavItem:hover
 {
   background-color: #53565f;
+}
+.sideNavLink:hover
+{
+  text-decoration: none;
 }
 .sideNavHeader
 {

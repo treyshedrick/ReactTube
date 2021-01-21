@@ -6,10 +6,12 @@ let SideNavItems = (props) =>{
     }
 
     return(
-        <div className="sideNavItem">
-            <div><a className="playlistLink" href={"https://www.youtube.com/playlist?list=" + props.playlist.id.playlistId}>{playlistTitle}</a></div>
-            <div ><span className="playlistChannel">{props.playlist.snippet.channelTitle}</span></div>
-        </div>
+        <a className="sideNavLink" href={"https://www.youtube.com/playlist?list=" + props.playlist.id.playlistId}>
+            <div className="sideNavItem">
+                <div className="playlistLink">{playlistTitle}</div>
+                <div ><span className="playlistChannel">{props.playlist.snippet.channelTitle}</span></div>
+            </div>
+        </a>
     )
 }
 
