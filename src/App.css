@@ -6,7 +6,7 @@
 .Main
 {
   height: 100%;
-  padding-top: 180px;
+  padding-top: 150px;
   text-align: center;
 }
 .App-logo {
@@ -70,12 +70,18 @@
   visibility: hidden;
 }
 }
+@media only screen and (max-width: 750px)
+{
+  .Main
+{
+  padding-top: 180px;
+}
+}
 @media only screen and (min-width: 1200px)
 {
   .Main
 {
   padding-left: 20%;
-  padding-top: 150px;
 }
 }
 
@@ -215,5 +221,6 @@
 {
   height: 80%;
   width: 80%;
-  padding-left: 10%;
+  padding-left: 20%;
+  text-align: left !important;
 }
