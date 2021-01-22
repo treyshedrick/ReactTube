@@ -8,7 +8,7 @@ let SideNav = () =>{
     const[error,isError] = useState(null);
 
     useEffect( () => {
-        getYoutubeContentHook(axiosLoaded, loadData, isError, './test2.json');
+        getYoutubeContentHook(axiosLoaded, loadData, isError, 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=viewCount&type=playlist&q=React%20Tutorial%20for%20Beginners&key='+process.env.REACT_APP_YOUTUBE_API_KEY);
     },[]);
 
     if(isLoaded && data != null){

@@ -21,18 +21,22 @@ class Main extends Component {
     
     componentDidMount(){
         //Youtube Endpoint
-        //getYoutubeContentMain(this,'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video&order=viewCount&q=ReactJS%20Tutorial&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
-        getYoutubeContentMain(this,'./test.json')
+        getYoutubeContentMain(this,'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video&order=viewCount&q=ReactJS%20Tutorial&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
+
+        //test.json used for testing
+        //getYoutubeContentMain(this,'./test.json')
     }
 
     componentDidUpdate(prevProps){
         if(prevProps.urlSearch !== this.props.urlSearch){
             //Youtube Endpoint
-            //getYoutubeContentMain(this,'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video&q=ReactJS%20Tutorial%20'+this.props.urlSearch+'&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
+            getYoutubeContentMain(this,'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&type=video&q=ReactJS%20Tutorial%20'+this.props.urlSearch+'&key=' + process.env.REACT_APP_YOUTUBE_API_KEY)
+
+            //test.json used for testing
+            //getYoutubeContentMain(this,'./test2.json')
             this.setState({
                 playVideo: false
             })
-            getYoutubeContentMain(this,'./test2.json')
         }
     }
 
